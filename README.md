@@ -96,7 +96,7 @@ DELETE FROM employees WHERE id = 2;
 ```
 
 ## Delete Employees by Age
-### Delete all employees with age less than 20 (assuming it's not a valid age):
+### Delete all employees with age less than 28 (assuming it's not a valid age):
 ```sql
 DELETE FROM employees WHERE age < 28;
 ```
