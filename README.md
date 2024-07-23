@@ -38,16 +38,18 @@ CREATE TABLE employees (
 ## Add a New Employee
 ### Add a new employee with all details:
 ```sql
-INSERT INTO employees (id, name, role, salary, age, address, phone)
-VALUES (1, 'John Doe', 'Manager', 75000.00, 35, '123 Main St', '123-456-7890');
+INSERT INTO employees (id,name,role,salary,age,address,Phone)
+VALUES (1,'Aayush','CEO',500000,22,'74,raghuvir dham,limbayat,surat',8604949240);
 ```
 ## Add Multiple Employees
-### Add multiple employees with selective data:
+### Add multiple employees with data:
 ```sql
-INSERT INTO employees (id, name, role, salary)
-VALUES 
-(2, 'Jane Smith', 'Developer', 65000.00),
-(3, 'Emily Johnson', 'Sales', 50000.00);
+INSERT INTO employees (id, name, role, salary, age, address, Phone) VALUES
+(4, 'Bhavika', 'CTO', 450000, 28, '12, Krushna Kunj, Adajan, Surat', 860499241),
+(5, 'Chetan', 'CFO', 400000, 35, '56, Laxmi Nagar, Vesu, Surat', 8604949242),
+(6, 'Dhara', 'COO', 420000, 30, '89, Green Park, Piplod, Surat', 8604949243),
+(7, 'Esha', 'CMO', 380000, 32, '45, Shiv Mandir Road, Katargam, Surat', 8604949244),
+(8, 'Farhan', 'CIO', 410000, 29, '22, Sagar Society, Rander, Surat', 8604949245);
 ```
 
 ## Retrieve All Employees
@@ -63,13 +65,13 @@ SELECT name, salary FROM employees;
 ```
 
 ## Find Employees by Role
-### Find employees with a specific role (e.g., Manager):
+### Find employees with a specific role (e.g., CEO):
 ```sql
-SELECT * FROM employees WHERE role = 'Manager';
+SELECT * FROM employees WHERE role = 'CEO';
 ```
 
 ## Search Employees by Name
-### Search for employees with names containing "An" (case-insensitive):
+### Search for employees with names containing "R" (case-insensitive):
 ```sql
 SELECT * FROM employees WHERE LOWER(name) LIKE '%an%';
 ```
@@ -77,30 +79,25 @@ SELECT * FROM employees WHERE LOWER(name) LIKE '%an%';
 ## Find Employees by Age and Salary
 ### Find employees older than 30 and earning more than $70,000:
 ```sql
-SELECT * FROM employees WHERE age > 30 AND salary > 70000;
+SELECT * FROM employees WHERE age > 28 AND salary > 70000;
 ```
 
-## Update Employee Salary
-### Change the salary of an employee with ID 100:
+## Update Employee role
+### Change the role of an employee with ID 3:
 ```sql
-UPDATE employees SET salary = 80000.00 WHERE id = 100;
+UPDATE employees SET role = "developer" WHERE id = 3;
 ```
 
-## Update Employee Address
-### Update the address for employees in the 'Sales' role:
-```sql
-UPDATE employees SET address = '456 New Address' WHERE role = 'Sales';
-```
 
 ## Remove an Employee
-### Remove an employee with ID 101:
+### Remove an employee with ID 2:
 ```sql
-DELETE FROM employees WHERE id = 101;
+DELETE FROM employees WHERE id = 2;
 ```
 
 ## Delete Employees by Age
 ### Delete all employees with age less than 20 (assuming it's not a valid age):
 ```sql
-DELETE FROM employees WHERE age < 20;
+DELETE FROM employees WHERE age < 28;
 ```
 
