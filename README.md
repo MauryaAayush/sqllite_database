@@ -73,7 +73,7 @@ SELECT * FROM employees WHERE role = 'CEO';
 ## Search Employees by Name
 ### Search for employees with names containing "R" (case-insensitive):
 ```sql
-SELECT * FROM employees WHERE LOWER(name) LIKE '%an%';
+SELECT * FROM employees WHERE LOWER(name) LIKE '%R%';
 ```
 
 ## Find Employees by Age and Salary
