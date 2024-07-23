@@ -77,7 +77,7 @@ SELECT * FROM employees WHERE LOWER(name) LIKE '%R%';
 ```
 
 ## Find Employees by Age and Salary
-### Find employees older than 30 and earning more than $70,000:
+### Find employees older than 28 and earning more than $70,000:
 ```sql
 SELECT * FROM employees WHERE age > 28 AND salary > 70000;
 ```
